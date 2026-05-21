@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Morelli 2026 · Andrea Amoruso</title>
+
+<!-- KaTeX — NON defer, caricati in ordine sincrono -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="stage">
+  <div id="stars"><canvas id="stars-canvas"></canvas></div>
+
+  <!-- ══ SLIDE 0 — Copertina ══ -->
+  <div class="slide slide-title-page">
+    <div class="main-title">MISURE ASTRONOMICHE</div>
+    <div class="subtitle">Fra storia, unverso e matematica</div>
+    <div class="divider"><span class="divider-star">✦</span></div>
+    <div class="author">Andrea Amoruso &nbsp;·&nbsp; Maggio 2026</div>
+  </div>
+
+  <!-- ══ SEZIONE 1 — Cover ══ -->
+  <div class="slide slide-cover">
+    <div class="section-number">Sezione I</div>
+    <div class="cover-title">La Misura</div>
+    <div class="divider"><span class="divider-star">✦</span></div>
+    <div class="cover-sub">Storia e origini</div>
+  </div>
+
+  <!-- 1.1 -->
+  <div class="slide slide-content">
+    <div class="slide-label">1.1</div>
+    <div class="slide-title">Cosa vuol dire misura</div>
+    <div class="slide-body">
+      <p>Il concetto di misura nasce dall'esigenza dell'uomo di comprendere, confrontare e organizzare il mondo che lo circonda. Fin dall'antichità, misurare il tempo, le distanze, il peso e le quantità è stato fondamentale per il commercio, l'agricoltura, la costruzione di città e lo sviluppo delle scienze.</p>
+      <p>Grazie alla misura, le civiltà hanno potuto creare strumenti più precisi, stabilire regole comuni e favorire gli scambi tra popoli diversi. L'importanza della misura nella storia dell'umanità è enorme, perché ha reso possibile il progresso tecnologico e scientifico, contribuendo alla nascita della matematica, della fisica e dell'ingegneria moderne.</p>
+    </div>
+    <!-- GRAFICA generata autonomamente -->
+    <div class="grafica-wrap">
+      <svg viewBox="0 0 1060 118" width="1060" height="118" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gBar" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#7b9fff"/><stop offset="100%" stop-color="#c8a96e"/>
+          </linearGradient>
+        </defs>
+        <line x1="85" y1="24" x2="975" y2="24" stroke="url(#gBar)" stroke-width="1.5" opacity=".45"/>
+        <polygon points="528,16 534,28 522,28" fill="#c8a96e" opacity=".55"/>
+        <text x="530" y="12" font-family="JetBrains Mono,monospace" font-size="9" fill="#c8a96e" text-anchor="middle" letter-spacing="3" opacity=".75">MISURA</text>
+        <g font-family="JetBrains Mono,monospace" font-size="10" text-anchor="middle" letter-spacing="1">
+          <rect x="20"  y="34" width="130" height="58" rx="5" fill="none" stroke="#7b9fff" stroke-width="1" opacity=".4"/>
+          <text x="85"  y="70" fill="#c8a96e" font-size="22">⚖</text>
+          <text x="85"  y="105" fill="#7b9fff">COMMERCIO</text>
+
+          <rect x="188" y="34" width="130" height="58" rx="5" fill="none" stroke="#7b9fff" stroke-width="1" opacity=".4"/>
+          <text x="253" y="70" fill="#c8a96e" font-size="22">🌾</text>
+          <text x="253" y="105" fill="#7b9fff">AGRICOLTURA</text>
+
+          <rect x="356" y="34" width="130" height="58" rx="5" fill="none" stroke="#7b9fff" stroke-width="1" opacity=".4"/>
+          <text x="421" y="70" fill="#c8a96e" font-size="22">🏛</text>
+          <text x="421" y="105" fill="#7b9fff">ARCHITETTURA</text>
+
+          <rect x="524" y="34" width="130" height="58" rx="5" fill="none" stroke="#7b9fff" stroke-width="1" opacity=".4"/>
+          <text x="589" y="70" fill="#c8a96e" font-size="22">🔭</text>
+          <text x="589" y="105" fill="#7b9fff">ASTRONOMIA</text>
+
+          <rect x="692" y="34" width="130" height="58" rx="5" fill="none" stroke="#7b9fff" stroke-width="1" opacity=".4"/>
+          <text x="757" y="70" fill="#c8a96e" font-size="22">⚗</text>
+          <text x="757" y="105" fill="#7b9fff">SCIENZA</text>
+
+          <rect x="860" y="34" width="130" height="58" rx="5" fill="none" stroke="#7b9fff" stroke-width="1" opacity=".4"/>
+          <text x="925" y="70" fill="#c8a96e" font-size="22">⚙</text>
+          <text x="925" y="105" fill="#7b9fff">INGEGNERIA</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 1.2 -->
+  <div class="slide slide-content">
+    <div class="slide-label">1.2</div>
+    <div class="slide-title">La misura nella matematica moderna</div>
+    <div class="slide-body">
+      <p>Uno <strong style="color:var(--white)">spazio metrico</strong> è una coppia \((X, d)\), dove \(X\) è un insieme e \(d\) è la <em>metrica</em>: una funzione che associa a ogni coppia di punti un numero reale non negativo, soddisfacendo le seguenti proprietà fondamentali:</p>
+      <ol class="prop-list">
+        <li>La distanza è sempre positiva o nulla.</li>
+        <li>La distanza è zero solo tra un punto e sé stesso.</li>
+        <li><span>La distanza tra \(A\) e \(B\) è uguale a quella tra \(B\) e \(A\).</span></li>
+        <li>Vale la disuguaglianza triangolare:</li>
+      </ol>
+      <div class="formula-box">
+        \[ d(x,\,z) \;\leq\; d(x,\,y) + d(y,\,z) \]
+      </div>
+      <p>Un esempio classico è il piano cartesiano con la distanza euclidea. Gli spazi metrici permettono di studiare continuità, convergenza e vicinanza in modo generale.</p>
+    </div>
+  </div>
+
+  <!-- ══ SEZIONE 2 — Cover ══ -->
+  <div class="slide slide-cover">
+    <div class="section-number">Sezione II</div>
+    <div class="cover-title">La Terra</div>
+    <div class="divider"><span class="divider-star">✦</span></div>
+    <div class="cover-sub">Forma, dimensioni e misure antiche</div>
+  </div>
+
+  <!-- 2.1 -->
+  <div class="slide slide-content has-media">
+    <div class="slide-label">2.1</div>
+    <div class="slide-title">La Terra è una sfera!</div>
+    <div class="slide-body">
+      <p>In molti non sanno che la forma sferica della Terra è conosciuta fin dai tempi degli antichi greci. Ma come potevano loro immaginarlo?</p>
+      <p>Certamente non potevano semplicemente andare nello spazio e osservare la Terra da ogni angolazione…</p>
+    </div>
+    <div class="media-col">
+      <div class="placeholder" style="background-color: transparent; border: none;">
+        <img style="height: 500px;" src="https://i.ibb.co/84nrGk0Z/3d-rendering-planet-earth.png" alt="3d rendering planet earth" border="0">
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.2 -->
+  <div class="slide slide-content has-media">
+    <div class="slide-label">2.2</div>
+    <div class="slide-title">Ma come capirlo?</div>
+    <div class="slide-body">
+      <p>Come spesso succede per le misure astronomiche un buon metodo è il confronto, e quale miglior oggetto se non la Luna! È necessario però osservarla durante un'eclissi di Luna per notare la forma sferica della Terra.</p>
+    </div>
+    <div class="media-col">
+      <div class="placeholder">
+        <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" src="https://i.ibb.co/vvjQmntc/image.png" alt="image" border="0">
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.3 -->
+  <div class="slide slide-content has-media">
+    <div class="slide-label">2.3</div>
+    <div class="slide-title">La misura del raggio della Terra</div>
+    <div class="slide-body">
+      <p>Fu per primo Eratostene a calcolare il raggio della Terra. Il metodo è abbastanza semplice. Eratostene si accorse che nella città di Assuan il sole in un determinato momento della giornata non faceva proiettare alcuna ombra a un bastone piantato perpendicolarmente al terreno.</p>
+      <p>Cosa diversa accadeva invece ad Alessandria, dove si trovava, e nella quale veniva proiettata un'ombra con un angolo θ di circa 7°. Bastò poi calcolare l'arco di circonferenza tra Assuan e Alessandria per ottenere la misura della circonferenza terrestre e quindi del suo raggio.</p>
+    </div>
+    <div class="media-col">
+      <div class="placeholder">
+        <img src="https://i.ibb.co/bj8tzYWS/image.png" alt="image" border="0">
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SEZIONE 3 — Cover ══ -->
+  <div class="slide slide-cover">
+    <div class="section-number">Sezione III</div>
+    <div class="cover-title">La Luna</div>
+    <div class="divider"><span class="divider-star">✦</span></div>
+    <div class="cover-sub">Distanza, raggio e misure</div>
+  </div>
+
+  <!-- 3.1 -->
+  <div class="slide slide-content">
+    <div class="slide-label">3.1</div>
+    <div class="slide-title">Le misure della Luna</div>
+    <div class="slide-body">
+      <p>L'oggetto celeste a noi più familiare è senza dubbio la Luna, ed è quindi ragionevole che sia il prossimo oggetto del nostro interesse.</p>
+      <p>Una volta ottenute informazioni sulla Terra, risulta in realtà molto semplice scoprire di più sul nostro satellite naturale.</p>
+    </div>
+  </div>
+
+  <!-- 3.2 -->
+  <div class="slide slide-content has-media" style="display: flex; flex-direction: column;">
+    <div class="slide-label">3.2</div>
+    <div class="slide-title">Quanto dista la Luna?</div>
+    <div class="slide-body">
+      <p>Per calcolarne la distanza è necessario ritornare alle nostre care eclissi Lunari. Osservando il tempo di un'eclissi è possibile infatti dedurre il raggio dell'orbita (approssimando l'orbita a una circonferenza). Basti pensare che il tempo in cui la Luna è oscurata dalla Terra (circa 4 ore) è il tempo che impiega per percorrere un tratto lungo circa due volte il raggio della Terra. Applicando quindi la seguente formula otteniamo il raggio dell'orbita:</p>
+      <div class="formula-box">
+        \[ \frac{28\,\text{giorni}}{4\,\text{ore}} \;=\; \frac{2\pi D_L}{2R_T} \]
+      </div>
+    </div>
+    <div class="media-col" style="display: flex; flex-direction: row; width: 100%; height: 250px;">
+      <div class="placeholder" style="flex: 1;">
+        <img style="height: 100%; width: auto;" src="https://i.ibb.co/VcTkyfVv/image.png" alt="image" border="0">
+      </div>
+      <div class="placeholder"  style="padding:0; overflow:hidden; flex: 1;">
+        <iframe style=" height: 100%;" src="https://www.youtube.com/embed/YdOXS_9_P4U?start=546&end=551&loop=0&playlist=YdOXS_9_P4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+      </div> 
+    </div>
+  </div>
+
+  <!-- 3.3 -->
+  <div class="slide slide-content has-media">
+    <div class="slide-label">3.3</div>
+    <div class="slide-title">Quanto vale il suo raggio?</div>
+    <div class="slide-body">
+      <p>Per dedurre il raggio i metodi sarebbero vari, ma i Greci usarono un metodo particolare. Conoscendo ormai la distanza Terra-Luna basta calcolare il tempo che la Luna impiega per sorgere. Il sorgere della Luna (della durata di circa due minuti) è dovuto principalmente al movimento di rivoluzione che la Terra compie intorno al suo asse. Durante questo movimento la Terra quasi come uno "scanner" percorre tutto il diametro Lunare come in video. Compiendo la Terra un giro su se stessa in 24 ore otteniamo la seguente formula:</p>
+      <div class="formula-box">
+        \[ \frac{2\,\text{min}}{24\,\text{ore}} \;=\; \frac{2R_L}{2\pi D_L} \]
+      </div>
+    </div>
+    <div class="media-col">
+      <!-- <div class="placeholder">
+        <div class="placeholder-icon">▶</div>
+        <div class="placeholder-label"></div>
+      </div> -->
+    <div class="placeholder" style="padding:0; overflow:hidden;">
+    <!-- <iframe
+        src="https://www.youtube.com/embed/YdOXS_9_P4U?si=3hIRCHwuNLAmVPK-start=60&end=120&loop=1&playlist=ID_VIDEO&autoplay=0"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe> -->
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/YdOXS_9_P4U?start=636&end=640&loop=0&playlist=YdOXS_9_P4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+    </div>
+    </div>
+  </div>
+
+  <!-- ══ SEZIONE 4 — Cover ══ -->
+  <div class="slide slide-cover">
+    <div class="section-number">Sezione IV</div>
+    <div class="cover-title">Il Sole</div>
+    <div class="divider"><span class="divider-star">✦</span></div>
+    <div class="cover-sub">La stella che ci nutre</div>
+  </div>
+
+  <!-- 4.1 -->
+  <div class="slide slide-content">
+    <div class="slide-label">4.1</div>
+    <div class="slide-title">La distanza e il raggio del Sole</div>
+    <div class="slide-body">
+      <p>Una strana coincidenza ha voluto che le dimensioni della Luna e del Sole nel cielo (quindi dal nostro punto di vista) siano pressoché le stesse dimensioni. Questo ci permette di affermare che il rapporto raggio/distanza dalla Terra deve essere lo stesso per entrambi. Conoscendo già le dimensioni della Luna basterà avere una dimensione per il Sole, fra distanza e raggio, per calcolare l'altra.</p>
+    </div>
+  </div>
+
+  <!-- 4.2 -->
+  <div class="slide slide-content has-media">
+    <div class="slide-label">4.2</div>
+    <div class="slide-title">La distanza Terra–Sole</div>
+    <div class="slide-body">
+      <p>Per calcolare la distanza Terra-Sole è necessario affidarsi alle fasi Lunari. Basterà infatti osservare che geometricamente il momento in cui si forma una mezza Luna è proprio quando Terra Luna e Sole formano un angolo retto. Basterà quindi conoscere l'angolo Sole-Terra-Luna, calcolando il momento in cui la luna si mostra per metà illuminata e mettendo in rapporto con il periodo totale dell'orbita (circa 28 giorni), per poi usare un po' di trigonometria per calcolare la distanza da noi cercata:</p>
+      <div class="formula-box">
+        \[ D_S \;=\; \frac{D_L}{\sin(\theta)} \]
+      </div>
+    </div>
+    <div class="media-col">
+      <div class="placeholder">
+        <img src="https://i.ibb.co/35Fnnjhq/image.png" alt="image" border="0">
+      </div>
+    </div>
+  </div>
+
+  <!-- 4.3 -->
+  <div class="slide slide-content">
+    <div class="slide-label">4.3</div>
+    <div class="slide-title">L'eliocentrismo</div>
+    <div class="slide-body">
+      <p>Questo metodo venne utilizzato per la prima volta da Aristarco di Samo che approssimò l'angolo Terra-Sole-Luna con un angolo 12 volte maggiore di quello reale. I suoi risultati erano quindi ampiamente errati, ma portarono comunque a conclusioni interessanti: il Sole era più grande della Terra e più distante della Luna.</p>
+      <p>L'idea che il Sole fosse più grande portò inevitabilmente Aristarco a teorizzare il modello Eliocentrico, sembrandogli logico che un corpo più piccolo orbitasse attorno a uno più grande.</p>
+    </div>
+  </div>
+
+  <!-- 4.4 -->
+  <div class="slide slide-content has-media">
+    <div class="slide-label">4.4</div>
+    <div class="slide-title">Approssimazioni numeriche</div>
+    <div class="slide-body">
+      <p>Approssimazioni di <strong style="color: rgb(42, 206, 1);">funzioni</strong> trigonometriche e non sono essenziali nello studio della fisica. Ne riportiamo di seguito due metodi molto utili e intuitivi:</p>
+      <ol class="prop-list">
+        <li><span>La <strong style="color: red">serie di Taylor</strong> approssima una funzione tramite un polinomio costruito a partire dalle sue derivate in un punto, risultando molto efficace vicino a quel punto.</span></li>
+        <li><span>L'<strong style="color: rgb(0, 162, 255)">approssimazione di Padé</strong> utilizza un rapporto tra due polinomi e spesso garantisce una precisione maggiore, soprattutto vicino a singolarità o per intervalli più ampi.</span></li>
+      </ol>
+      <p>Per questo motivo, le approssimazioni di Padé sono molto utilizzate in fisica, ingegneria e analisi numerica quando la serie di Taylor converge lentamente o diverge.</p>
+    </div>
+    <div class="media-col">
+      <div class="placeholder">
+        <img src="https://i.ibb.co/5x8nSRGH/image.png" alt="image" border="0">
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SEZIONE 5 — Cover ══ -->
+  <div class="slide slide-cover">
+    <div class="section-number">Sezione V</div>
+    <div class="cover-title">Keplero<br>&amp; Newton</div>
+    <div class="divider"><span class="divider-star">✦</span></div>
+    <div class="cover-sub">Le leggi che governano i cieli</div>
+  </div>
+
+  <!-- 5.1 -->
+  <div class="slide slide-content has-media">
+    <div class="slide-label">5.1</div>
+    <div class="slide-title">Keplero e la sua prima legge</div>
+    <div class="slide-body">
+      <p>Il prossimo passaggio è quello ovviamente di calcolare le distanze dei pianeti dal Sole. Fu Keplero per primo a dare una risposta a questo quesito. Utilizzando i dati del suo maestro (in particolare quelli relativi a Marte) riuscì a disporre i pianeti su un'orbita coerente.</p>
+      <p>Si accorse che per quanto si impegnasse la forma circolare non funzionava bene e da qui la grande rivoluzione: l'ellissi.</p>
+    </div>
+    <div class="media-col">
+      <div class="placeholder"  style="padding:0; overflow:hidden;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YdOXS_9_P4U?start=1498&end=1535&loop=0&playlist=YdOXS_9_P4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+      </div>
+    </div>
+  </div>
+
+  <!-- 5.2 -->
+  <div class="slide slide-content">
+    <div class="slide-label">5.2</div>
+    <div class="slide-title">Newton e la Legge di gravitazione universale</div>
+    <div class="slide-body">
+    <p>Grazie alla terza legge di Keplero e a diverse osservazioni empiriche Newton formulò nel 1687 il suo capolavoro: la legge di gravitazione universale. Grazie a quest'ultima è stato possibile calcolare con precisione orbite, calcolare masse e dimostrare formalmente le leggi di Keplero utilizzando i moderni strumenti del calcolo integrale.</p>
+    <div class="formula-box">
+        \[ F = G\frac{m_1 m_2}{r^2} \]
+    </div>
+    <p>Non mostreremo formalmente tutte le conseguenze di questa legge, né entreremo nel merito della corretta attribuzione (se appartiene a Newton o a Hooke) ma avere consapevolezza di quanto sia stata rivoluzionaria questa legge è importante per comprendere l'evoluzione dell'astronomia.</p>
+    </div>
+  </div>
+
+  <!-- ══ FINALE ══ -->
+  <div class="slide slide-title-page">
+    <div class="main-title" style="font-size:62px;">Fine</div>
+    <div class="divider"><span class="divider-star">✦</span></div>
+    <div class="subtitle"></div>
+    <div class="author">Andrea Amoruso &nbsp;·&nbsp; Maggio 2026</div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="hud-left">Morelli 2026</div>
+    <div class="hud-center" id="slide-counter">1 / 1</div>
+    <div class="hud-right">
+      <div id="progress-bar"><div id="progress-fill"></div></div>
+      <button id="fullscreen-btn" title="Fullscreen (F)">⛶</button>
+    </div>
+  </div>
+</div>
+
+<script src="presentation.js"></script>
+</body>
+</html>
